@@ -1,1 +1,50 @@
+ In this project, I have utilized two real-world traffic datasets: PEMS-BAY and METR-LA, both
+ widely used in urban traffic prediction research. These datasets provide sensor-based traffic
+ measurements such as speed, flow, and occupancy, along with timestamps and spatial structure,
+ enabling effective spatio-temporal modeling.
 
+📍 1. METR-LA (Los Angeles)
+*Source: Caltrans Performance Measurement System (PeMS)
+*Region: Los Angeles County, California
+*Sensors: 207 loop detectors (traffic sensors)
+*Time Span: March 1st, 2012 – June 30th, 2012
+*Data Type: Traffic speed readings (in mph)
+*Frequency: Every 5 minutes
+
+#Missing Data: Contains some missing values (handled via interpolation or masking)
+
+✅ Key Features:
+*Time series of speed values
+*Includes timestamps for temporal modeling
+*Comes with a precomputed adjacency matrix (sensor graph based on road distances)
+*Ideal for training models that learn temporal patterns and spatial relationships
+
+📁 File Examples:
+* metr-la.h5: stores the speed data
+
+🌉 #2. PEMS-BAY (Bay Area)
+Source: Caltrans PeMS
+
+Region: San Francisco Bay Area
+
+Sensors: 325 traffic sensors
+
+Time Span: January 1st, 2017 – May 31st, 2017
+
+Data Type: Traffic speed data (in mph)
+
+Frequency: Every 5 minutes
+
+Size: Larger and more recent than METR-LA
+
+✅ Key Features:
+More sensors than METR-LA (325 vs. 207)
+
+Also includes a road graph (adjacency matrix)
+
+More extensive and recent dataset
+
+Suitable for large-scale spatial-temporal forecasting
+
+📁 File Examples:
+pems-bay.h5: contains traffic speed data
